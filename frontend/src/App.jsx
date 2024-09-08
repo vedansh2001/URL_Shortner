@@ -26,7 +26,6 @@ function App() {
       }
 
       const data = await response.json();
-      console.log('Shortened URL: ', data.id);
 
       // Navigate to the URL display page
       navigate(`/shortened/${data.id}`, { state: { url } });
