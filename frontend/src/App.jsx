@@ -3,9 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import './App.css';
 
 function App() {
+
   const [url, setUrl] = useState('');
   const navigate = useNavigate(); // Initialize navigate function
-
+  
   const handleClick = async () => {
     if (!url) {
       alert('Please enter a URL');
