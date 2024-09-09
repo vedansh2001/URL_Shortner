@@ -5,7 +5,7 @@ function ShortenedURL() {
     const { url } = location.state || {};
     const navigate = useNavigate();
     const id = useParams();
-    const value = `http://localhost:8000/${id.shortId}`;
+    const value = `https://url5.vercel.app/${id.shortId}`;
 
     const handleonclickfunction = () => {
         navigate('/');
@@ -21,7 +21,7 @@ function ShortenedURL() {
 
     const handleAnalytics = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/url/analytics/${id.shortId}`, {
+        const response = await fetch(`https://url5.vercel.app/url/analytics/${id.shortId}`, {
           method:'GET'
         })
         if (!response.ok) {
