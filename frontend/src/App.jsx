@@ -14,7 +14,7 @@ function App() {
     }
 
     try {
-      const response = await fetch('http://localhost:8000/url', {
+      const response = await fetch('https://url5.vercel.app/url', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
