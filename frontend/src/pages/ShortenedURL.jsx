@@ -50,6 +50,7 @@ function ShortenedURL() {
     <>
       <div className='bg-[#1E201E] w-full h-screen pb-[70px] flex justify-center pt-12
                         sm:pt-16
+                        sm:pb-[0px]
       '>
         <div className='w-[90%]
                         sm:w-3/5
