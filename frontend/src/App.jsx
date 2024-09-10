@@ -96,33 +96,37 @@ function App() {
           Transform lengthy URLs into sleek, shareable links effortlessly with URL shortner, the free tool designed for easy sharing across all your platforms!
         </p>
       </div>
-      <div className="mt-12 ml-[15%]
+      <div className="mt-12 ml-[5%] mr-[5%]
                       sm:flex justify-center
-                      sm:ml-[0]
+                      sm:ml-[15%]
       ">
               <a href={`https://www.linkedin.com/sharing/share-offsite/?url=`} target="_blank" rel="noopener noreferrer">
-                <button className="px-2 rounded py-1 text-lg mb-2 bg-blue-500 mr-2 text-white hover:opacity-80
+                <button className="px-1 rounded py-1 text-md mb-1 bg-blue-500 mr-1 text-white hover:opacity-80
+                                   sm:mr-2
                                    sm:px-4
                                    sm:py-2
                                    sm:text-xl
                 ">LinkedIn</button>
               </a>
               <a href={`https://t.me/share/url?url=`} target="_blank" rel="noopener noreferrer">
-                <button className="px-2 rounded py-1 text-lg mb-2 bg-blue-400 mr-2 text-white hover:opacity-80
+                <button className="px-1 rounded py-1 text-md mb-1 bg-blue-400 mr-1 text-white hover:opacity-80
+                                   sm:mr-2
                                    sm:px-4
                                    sm:py-2
                                    sm:text-xl
                 ">Telegram</button>
               </a>
               <a href={`https://api.whatsapp.com/send?text=`} target="_blank" rel="noopener noreferrer">
-                <button className="px-2 rounded py-1 text-lg mb-2 bg-green-500 mr-2 text-white hover:opacity-80
+                <button className="px-1 rounded py-1 text-md mb-1 bg-green-500 mr-1 text-white hover:opacity-80
+                                   sm:mr-2
                                    sm:px-4
                                    sm:py-2
                                    sm:text-xl
                 ">WhatsApp</button>
               </a>
               <a href={`https://twitter.com/intent/tweet?url=`} target="_blank" rel="noopener noreferrer">
-                <button className="px-3 rounded py-1 text-lg mb-2 bg-black mr-2 text-white hover:opacity-80
+                <button className="px-2 rounded py-1 text-md mb-1 bg-black mr-1 text-white hover:opacity-80
+                                   sm:mr-2
                                    sm:px-4
                                    sm:py-2
                                    sm:text-xl
