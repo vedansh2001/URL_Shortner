@@ -27,7 +27,6 @@ function ShortenedURL() {
   };
 
   const handleAnalytics = async () => {
-    setLoading(true); // Start loading
     try {
       const response = await fetch(`https://url5.vercel.app/url/analytics/${id.shortId}`, {
         method: 'GET'
@@ -35,6 +34,7 @@ function ShortenedURL() {
       if (!response.ok) {
         throw new Error('Failed to fetch analytics');
       }
+      setLoading(true); // Start loading
 
       const data = await response.json();
 
