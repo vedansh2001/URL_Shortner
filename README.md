@@ -26,7 +26,7 @@ A MERN stack-based URL shortener that converts long URLs into short, shareable l
 1. Clone the repository:
 
    ```bash
-   git clone <repository-link>
+   git clone https://github.com/vedansh2001/URL_Shortner.git
 2. Navigate to the backend folder:
 
    ```bash
@@ -61,9 +61,9 @@ Once both the backend and frontend servers are running, open your browser and go
 Enter a long URL in the input field, click the Shorten URL button, and your shortened URL will be generated. You can then copy the shortened URL using the Copy URL button and share it on social platforms.
 
 ## Screenshots
-![App Screenshot](frontend\public\photos\URL_Shortner1.png)
-![App Screenshot](frontend\public\photos\URL_Shortner2.png)
-![App Screenshot](frontend\public\photos\URL_Shortner3.png)
+![App Screenshot](frontend/public/photos/URL_Shortner1.png)
+![App Screenshot](frontend/public/photos/URL_Shortner2.png)
+![App Screenshot](frontend/public/photos/URL_Shortner3.png)
 
 ## Live Demo
 Live Deployed URL
