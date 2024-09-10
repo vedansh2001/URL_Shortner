@@ -9,9 +9,9 @@ import cors from "cors"
 dotenv.config({
   path: './env'
 })
-app.use(cors({         // "use" method is used for middlewares and configurations
+app.use(cors({        
     origin: process.env.CORS_ORIGIN,
-    credentials: true         //what credentail to allow
+    credentials: true  
 }))
 
 connectDB();
