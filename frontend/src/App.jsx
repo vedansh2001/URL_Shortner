@@ -5,13 +5,17 @@ import './App.css';
 function App() {
 
   const [url, setUrl] = useState('');
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate(); // Initialize navigate function
   
   const handleClick = async () => {
+
     if (!url) {
       alert('Please enter a URL');
       return;
     }
+    
+    setLoading(true); // Start loading
 
     try {
       const response = await fetch('https://url5.vercel.app/url', {
@@ -34,6 +38,8 @@ function App() {
     } catch (error) {
       console.error("Error: ", error);
       alert('An error occurred while shortening the URL.');
+    } finally {
+      setLoading(false); // Stop loading after fetch completes
     }
   };
 
@@ -53,11 +59,18 @@ function App() {
           className='rounded-l w-[80%] h-12 pl-4 text-xl border-2
         ' />
         <button 
-          onClick={handleClick}
-          className='bg-[#ECDFCC] h-12 w-[20%] py-2 text-xl font-semibold rounded-r border-2
-                      hover:opacity-80 '
-        >
-          Shorten
+          className={`bg-[#ECDFCC] h-12 w-[20%] py-2 text-xl font-semibold rounded-r border-2 flex justify-center items-center
+                      hover:opacity-80 ${loading ? 'cursor-not-allowed opacity-60' : ''}`}
+              onClick={handleClick}
+              disabled={loading}
+              style={{ width: '200px' }} // Set a fixed width for the button
+            >
+          {loading ? (
+                <div className="spinner"></div> // Placeholder for loading animation
+              ) : (
+                'Shorten'
+              )}
+          
         </button>
         </div>
         <p className='flex justify-center w-[80%] ml-[10%] font-sans leading-normal font-semibold text-gray-950 tracking-wider'>Transform lengthy URLs into sleek, shareable links effortlessly with URL SHORTENER, the free tool designed for easy sharing across all your platforms!</p>
