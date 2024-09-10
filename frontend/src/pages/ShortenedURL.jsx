@@ -48,15 +48,17 @@ function ShortenedURL() {
 
   return (
     <>
-      <div className='bg-[#1E201E] w-full h-screen flex justify-center pt-12
+      <div className='bg-[#1E201E] w-full h-screen pb-[70px] flex justify-center pt-12
                         sm:pt-16
       '>
-        <div className='w-3/5'>
+        <div className='w-[90%]
+                        sm:w-3/5
+        '>
           <h1 className='text-white text-4xl font-bold flex justify-center pb-6
                            sm:text-5xl
                            sm:pb-8
           '>Shortened Url</h1>
-          <div className='bg-[#40534C] w-full h-[90%] rounded-md relative
+          <div className='bg-[#40534C] w-full h-[98%] rounded-md relative
                             lg:h-[80%]
           '>
             <h1 className='pt-7 pl-3 text-2xl font-semibold text-white flex justify-center

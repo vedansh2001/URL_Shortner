@@ -45,7 +45,9 @@ function App() {
     <div className='bg-[#1E201E] w-full h-screen flex justify-center pt-12
                       sm:pt-32
      '>
-     <div className='w-3/5'>
+     <div className='w-[90%]
+                     sm:w-3/5
+     '>
       <h1 className='text-white text-4xl font-bold flex justify-center pb-8
                        sm:text-5xl
       '>Url Shortner</h1>

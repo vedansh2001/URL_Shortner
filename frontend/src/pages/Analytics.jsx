@@ -22,7 +22,9 @@ function Analytics() {
         <div className='bg-[#1E201E] w-full h-screen flex justify-center pt-16
                           sm:pt-20
         '>
-         <div className='w-3/5'>
+         <div className='w-[90%]
+                         sm:w-3/5
+         '>
            <h1 className='text-white text-5xl font-bold flex justify-center pb-8'>
              Analytics
            </h1>
@@ -46,8 +48,9 @@ function Analytics() {
           </div>
 
                <button 
-                className=' bg-gray-200 h-12 py-2 px-3 mb-5 text-xl ml-[10%] font-semibold rounded border-2 hover:opacity-80 block 
+                className=' bg-gray-200 h-12 py-2 px-3 mb-5 text-lg ml-[10%] font-semibold rounded border-2 hover:opacity-80 block 
                              sm:mb-8
+                             sm:text-xl
                              sm:ml-[15%]
                              sm:px-4
                 '
@@ -57,14 +60,15 @@ function Analytics() {
                </button>
                
                <button 
-                className=' bg-gray-200 h-12 py-2 px-2 mb-5 text-xl ml-[10%] font-semibold rounded border-2 hover:opacity-80 
+                className=' bg-gray-200 h-12 py-2 px-2 mb-5 text-lg ml-[10%] font-semibold rounded border-2 hover:opacity-80 
                               sm:mb-8
+                              sm:text-xl
                               sm:px-4
                               sm:ml-[15%]
                 '
                 onClick={handleGoToShortenedURL}
                >
-                 Go back to shortened URL
+                 Back to shortened URL
                </button>
             
           </div>
