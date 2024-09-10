@@ -48,25 +48,44 @@ function ShortenedURL() {
 
   return (
     <>
-      <div className='bg-[#1E201E] w-full h-screen flex justify-center pt-20'>
+      <div className='bg-[#1E201E] w-full h-screen flex justify-center pt-12
+                        sm:pt-16
+      '>
         <div className='w-3/5'>
-          <h1 className='text-white text-5xl font-bold flex justify-center font-mono pb-8'>SHORTENED URL</h1>
-          <div className='bg-[#40534C] w-full h-[80%] rounded-md relative'> {/* Add relative to parent */}
-            <h1 className='pt-7 text-3xl font-semibold text-gray-900 flex justify-center'>
+          <h1 className='text-white text-4xl font-bold flex justify-center pb-6
+                           sm:text-5xl
+                           sm:pb-8
+          '>Shortened Url</h1>
+          <div className='bg-[#40534C] w-full h-[90%] rounded-md relative
+                            lg:h-[80%]
+          '>
+            <h1 className='pt-7 pl-3 text-2xl font-semibold text-white flex justify-center
+                           sm:text-3xl
+            '>
               Copy the shortened link and share it anywhere
             </h1>
-            <div className='flex justify-center pt-12 pb-5 w-[80%] ml-[10%] relative'>
+            <div className='flex justify-center pt-9 pb-5 w-[80%] ml-[10%] relative
+                            sm:pt-12
+            '>
               <input
                 type="text"
                 placeholder='Enter the link here...'
                 value={value}
-                className='rounded-l w-[80%] h-12 pl-4 text-xl border-2'
+                className='rounded-l w-[70%] h-12 pl-2 text-lg border-2 bg-gray-200
+                           sm:w-[80%]
+                           sm:pl-4
+                           sm:text-xl
+                '
               />
               <button
-                className='bg-[#ECDFCC] h-12 w-[20%] py-2 text-xl font-semibold rounded-r border-2 hover:opacity-80 relative'
+                className='bg-gray-300 h-12 w-[30%] py-2 text-lg font-semibold rounded-r border-2 hover:opacity-80 relative flex justify-center items-center
+                             sm:w-[20%]
+                             sm:text-2xl
+                             sm:font-bold
+                '
                 onClick={handleCopyShortenedURL}
               >
-                Copy URL
+                Copy
               </button>
 
               {copied && (
@@ -89,19 +108,23 @@ function ShortenedURL() {
             </p>
 
             <button
-              className='bg-[#ECDFCC] h-12 py-2 px-4 mb-8 text-xl ml-[10%] font-semibold rounded border-2 hover:opacity-80'
+              className='bg-gray-300 h-12 py-2 px-4 mb-8 text-lg ml-[10%] font-semibold rounded border-2 hover:opacity-80
+                           sm:text-xl
+              '
               onClick={handleShortenAnotherURL}
             >
               Shorten another URL
             </button>
 
             <button
-              className={`bg-[#ECDFCC] h-12 py-2 px-4 mb-10 text-xl ml-[10%] font-semibold rounded border-2 hover:opacity-80 
+              className={`bg-gray-300 h-12 py-2 px-4 mb-5 text-lg ml-[10%] font-semibold rounded border-2 hover:opacity-80 
                 flex items-center justify-center 
+                sm:text-xl
+                sm:w-[180px]
+                sm:mb-10
                 ${loading ? 'cursor-not-allowed opacity-60' : ''}`}
               onClick={handleAnalytics}
               disabled={loading}
-              style={{ width: '200px' }}
             >
               {loading ? (
                 <div className="spinner"></div> 
@@ -110,25 +133,25 @@ function ShortenedURL() {
               )}
             </button>
 
-            <h1 className="ml-[10%] font-sans text-4xl font-semibold mb-7 text-gray-900">
+            <h1 className="ml-[10%] font-sans text-2xl font-semibold mb-7 text-gray-900
+                           sm:text-3xl
+                           lg:text-4xl
+            ">
               Share it on social Platforms
             </h1>
 
             <div className="ml-[10%]">
               <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${value}`} target="_blank" rel="noopener noreferrer">
-                <button className="px-4 rounded py-2 text-xl bg-blue-500 mr-2 text-white hover:opacity-80">LinkedIn</button>
+                <button className="px-4 rounded py-2 text-xl mb-2 bg-blue-500 mr-2 text-white hover:opacity-80">LinkedIn</button>
+              </a>
+              <a href={`https://t.me/share/url?url=${value}`} target="_blank" rel="noopener noreferrer">
+                <button className="px-4 rounded py-2 text-xl mb-2 bg-blue-400 mr-2 text-white hover:opacity-80">Telegram</button>
               </a>
               <a href={`https://api.whatsapp.com/send?text=${value}`} target="_blank" rel="noopener noreferrer">
                 <button className="px-4 rounded py-2 text-xl bg-green-500 mr-2 text-white hover:opacity-80">WhatsApp</button>
               </a>
               <a href={`https://twitter.com/intent/tweet?url=${value}`} target="_blank" rel="noopener noreferrer">
-                <button className="px-4 rounded py-2 text-xl bg-black mr-2 text-white hover:opacity-80">X</button>
-              </a>
-              <a href={`https://www.facebook.com/sharer/sharer.php?u=${value}`} target="_blank" rel="noopener noreferrer">
-                <button className="px-4 rounded py-2 text-xl bg-blue-600 mr-2 text-white hover:opacity-80">Facebook</button>
-              </a>
-              <a href={`https://t.me/share/url?url=${value}`} target="_blank" rel="noopener noreferrer">
-                <button className="px-4 rounded py-2 text-xl bg-blue-400 mr-2 text-white hover:opacity-80">Telegram</button>
+                <button className="px-4 rounded py-2 text-xl bg-black mr-2 text-white hover:opacity-80">Twitter</button>
               </a>
             </div>
           </div>
